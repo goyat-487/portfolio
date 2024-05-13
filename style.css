@@ -361,7 +361,7 @@
         
         .service-box:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 255, 0.5);
         }
         
         .service-box h3 {
@@ -385,15 +385,21 @@
             padding: 50px;
             text-align: center;
             background: linear-gradient(to right, #87cefa, #ffc0cb);
+            border-radius: 10px;
+            margin: 20px;
+            /* Added margin for spacing */
         }
         
         .section-heading {
-            margin-bottom: 50px;
-            font-size: 28px;
+            margin-bottom: 30px;
+            /* Reduced margin for better spacing */
+            font-size: 32px;
+            /* Increased font size for emphasis */
         }
         
         .skill-category {
             margin-bottom: 30px;
+            /* Reduced margin for better spacing */
         }
         
         .skill {
@@ -405,6 +411,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .skill i {
@@ -423,9 +430,213 @@
         
         .skill:hover {
             transform: translateY(-5px);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 255, 0.5);
         }
-        /* @media (max-width: 799px) {
+        /*projects*/
+        
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+            background: linear-gradient(to right, #87cefa, #ffc0cb);
+            /* Added background gradient */
+            padding: 20px;
+            /* Added padding for better spacing */
+            border-radius: 10px;
+            /* Added border radius for a nicer look */
+        }
+        
+        .project {
+            width: calc(50% - 20px);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        
+        .heading p {
+            text-align: center;
+            /* Centering the text */
+            font-size: 28px;
+            /* Larger font size for headings */
+            margin-bottom: 20px;
+            /* Adding some space between the heading and the content */
+            color: #333;
+            /* Dark gray color */
+            font-weight: bold;
+            /* Adding bold font weight */
+            /* Centering the text */
+            text-align: center;
+            /* Centering the text */
+        }
+        
+        .project:nth-child(odd) {
+            margin-right: 20px;
+        }
+        
+        .project:nth-child(even) {
+            margin-left: 20px;
+        }
+        
+        .project:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 255, 0.5);
+        }
+        
+        .project-content {
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .project-content p {
+            margin-top: 10px;
+            text-align: center;
+            /* Centering the text */
+            font-size: 21px;
+            /* Larger font size for content */
+            color: #333;
+            /* Dark gray color */
+        }
+        
+        .project-content a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .project-content img {
+            width: 80%;
+            /* Adjust image size */
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            /* Ensure images stay centered */
+            margin: 0 auto;
+            /* Center images */
+        }
+        /*contact*/
+        
+        .contact {
+            padding: 50px;
+            text-align: center;
+            background: linear-gradient(to right, #87cefa, #ffc0cb);
+            border-radius: 10px;
+            margin: 20px;
+            /* Added margin for spacing */
+        }
+        
+        .section-heading {
+            margin-bottom: 30px;
+            /* Slightly reduced margin for better spacing */
+            font-size: 32px;
+            /* Increased font size for emphasis */
+            color: #333;
+            /* Dark gray color */
+        }
+        
+        .contact-info,
+        .contact-form {
+            margin-bottom: 30px;
+            /* Reduced margin for better spacing */
+        }
+        
+        .contact-info h4,
+        .contact-form h4 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            /* Dark gray color */
+        }
+        
+        .contact-info span {
+            margin-bottom: 20px;
+            color: cyan;
+            /* Gray color */
+        }
+        
+        .contact-info p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #666;
+            /* Gray color */
+        }
+        
+        .contact-info .home-sci {
+            margin-top: 20px;
+        }
+        
+        .contact-info .home-sci a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #007bff;
+            /* Blue color */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+            color: #fff;
+            /* White color */
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-info .home-sci a:hover {
+            background-color: #0056b3;
+            /* Darker blue color on hover */
+        }
+        
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 50%;
+            padding: 12px;
+            /* Increased padding for better input field appearance */
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            /* Light gray border */
+            border-radius: 5px;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            /* Increased height for textarea */
+        }
+        
+        .contact-form button {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            /* Increased font size for button */
+            font-weight: 500;
+            display: inline-block;
+            padding: 15px 30px;
+            /* Adjusted padding for button */
+            background: #00ffff;
+            border-radius: 5px;
+            border: 2px solid #00ffff;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-form button:hover {
+            box-shadow: 0 0 5px rgb(20, 26, 26);
+            color: #00ffff;
+            background: #131a22;
+        }
+        
+        @media (max-width: 1024px) {
+            .left-content {
+                width: 80%;
+                /* Adjusted width for better responsiveness */
+                padding: 70px 50px 0;
+                /* Adjusted padding for better responsiveness */
+            }
+        }
+        
+        @media (max-width: 799px) {
             #navbar {
                 display: flex;
                 flex-direction: column;
@@ -463,18 +674,63 @@
                 color: #fff;
                 font-size: 24px;
             }
-            .home-content {
+            .home {
                 flex-direction: column;
-                align-items: center;
+                /* Stack elements vertically */
+                padding: 50px 20px;
+                /* Adjusted padding for better responsiveness */
             }
-            .left-content,
-            .right-content {
+            .left-content {
                 width: 100%;
-                padding: 20px 0;
-                text-align: center;
+                /* Full width on smaller screens */
+                padding: 50px 20px 0;
+                /* Adjusted padding for better responsiveness */
             }
             .right-content {
-                margin-top: 20px;
+                display: none;
+                /* Hide right content on smaller screens */
+            }
+            .profile-image {
+                display: none;
+                /* Hide profile image on smaller screens */
+            }
+            .right-content {
+                display: none;
+                /* Hide right content on smaller screens */
+            }
+            .profile-image {
+                display: none;
+                /* Hide profile image on smaller screens */
+            }
+            .about {
+                flex-direction: column;
+                /* Stack elements vertically on smaller screens */
+                padding: 50px 20px;
+                /* Adjusted padding for better responsiveness */
+            }
+            .about-content {
+                text-align: center;
+                /* Center align text on smaller screens */
+                margin-top: 30px;
+                /* Adjusted margin for better spacing */
+            }
+            .profile-image1 {
+                margin-right: 0;
+                /* Remove margin for image on smaller screens */
+            }
+            .profile-image1 img {
+                margin-top: 0;
+                /* Remove top margin for image on smaller screens */
+            }
+            .skills {
+                padding: 30px;
+                /* Reduced padding for better spacing */
+            }
+            .skill {
+                width: 100%;
+                /* Full width on smaller screens */
+                margin: 0 auto 20px;
+                /* Centered and added bottom margin */
             }
         }
         
@@ -496,15 +752,8 @@
                 color: #fff;
                 font-size: 24px;
                 padding-left: 20px;
-            }
-            .left-content,
-            .right-content {
-                padding: 10px 0;
-            }
-            .profile-image {
-                width: 150px;
                 height: 150px;
             }
         }
         
-        */
+        
