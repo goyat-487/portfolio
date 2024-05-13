@@ -46,6 +46,32 @@ document.getElementById("downloadBtn").addEventListener("click", function() {
 });
 
 
+// JavaScript code to add active class to the clicked navigation link and scroll to the corresponding section
+
+// Get all the navigation links
+const navLinks = document.querySelectorAll('#navbar li a');
+
+// Function to set active class and scroll to section
+function setActiveLink(event) {
+    // Prevent the default behavior of the anchor tag
+    event.preventDefault();
+
+    // Remove active class from all links
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    // Add active class to the clicked link
+    event.target.classList.add('active');
+
+    // Get the target section ID from the href attribute
+    const targetSectionId = event.target.getAttribute('href').substring(1);
+
+    // Scroll to the target section
+    const targetSection = document.getElementById(targetSectionId);
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Add click event listener to each navigation link
+navLinks.forEach(link => link.addEventListener('click', setActiveLink));
 
 
 
