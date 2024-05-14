@@ -129,6 +129,15 @@ body {
     animation: slideFromLeft 1s ease forwards;
 }
 
+#roleHeader {
+    display: inline-block;
+    min-width: 200px;
+    /* Adjust based on the longest role text */
+    text-align: left;
+    height: 1em;
+    /* Ensure this matches the line-height */
+}
+
 .left-content p {
     font-size: 20px;
     margin-top: 20px;
@@ -705,6 +714,9 @@ body {
         /* Full width on smaller screens */
         padding: 50px 20px 0;
         /* Adjusted padding for better responsiveness */
+    }
+    #roleHeader {
+        font-size: 24px;
     }
     .right-content {
         display: none;
